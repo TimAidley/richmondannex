@@ -1,5 +1,7 @@
 import {EleventyRenderPlugin} from "@11ty/eleventy";
 
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 export default async function(eleventyConfig) {
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.addPlugin(EleventyRenderPlugin);

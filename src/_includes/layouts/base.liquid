@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Richmond Annex Neighborhood Council</title>
+
+  <!-- Pico.css for an instant, clean, accessible design -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+
+  <!-- GLOBAL HEADER -->
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong><a href="/" class="contrast">Richmond Annex</a></strong></li>
+      </ul>
+      <ul>
+        {% assign nav_items = collections.navMenu | sort: "data.order" %}
+
+        {% for item in nav_items %}
+          <li>
+            <a href="{{ item.url }}">{{ item.data.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <!-- MAIN CONTENT AREA -->
+  <!-- In Liquid, the rendered Markdown is simply injected using the content variable -->
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="container">
+    <hr>
+    <div class="grid">
+      <div>
+        <p><strong>Richmond Neighborhood Council</strong><br>
+        Serving our community since [Year]</p>
+      </div>
+      <div>
+        <p><strong>Contact Us</strong><br>
+        Email: hello@richmondcouncil.org<br>
+        Phone: (555) 123-4567</p>
+      </div>
+    </div>
+
+    <!-- Sponsor Section Placeholder -->
+    <!--
+    <div style="text-align: center; margin-top: 2rem;">
+      <small>Thank you to our local sponsors:</small>
+      <p><em>[Sponsor Logos will go here]</em></p>
+    </div>
+    -->
+  </footer>
+
+</body>
+</html>

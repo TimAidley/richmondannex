@@ -12,4 +12,7 @@ content:
         options:
           time: false
           format: yyyy-MM-dd
+      - name: body
+        type: rich-text
+        
           

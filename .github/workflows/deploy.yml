@@ -32,7 +32,7 @@ jobs:
         run: npm install
 
       - name: Build Eleventy
-        run: npx @11ty/eleventy
+        run: npx @11ty/eleventy --pathprefix=/richmondannex/
         # If you have a specific build script in package.json, you can use `run: npm run build` instead
 
       - name: Setup Pages

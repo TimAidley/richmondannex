@@ -1,0 +1,15 @@
+media: media
+content:
+  - name: events
+    label: Events
+    type: collection
+    path: src/events
+    fields:
+      - name: title
+        type: string
+      - name: date
+        type: date
+        options:
+          time: false
+          format: yyyy-MM-dd
+          
